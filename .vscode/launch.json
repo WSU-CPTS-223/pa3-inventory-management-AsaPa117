@@ -1,0 +1,29 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "(gdb) Launch pa3exe",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "/mnt/c/Users/AsaPa/CPTS_223/pa3-inventory-management-AsaPa117/pa3/pa3exe",
+      "args": [],
+      "cwd": "/mnt/c/Users/AsaPa/CPTS_223/pa3-inventory-management-AsaPa117/pa3",
+      "MIMode": "gdb",
+      "miDebuggerPath": "/usr/bin/gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "build pa3 project",
+      "environment": [
+        {
+          "name": "ASAN_OPTIONS",
+          "value": "detect_leaks=1"
+        }
+      ]
+    }
+  ]
+}
